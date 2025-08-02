@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="index.js"></script>
+  <main class="cart-container" aria-label="Shopping cart">
+    <h1 class="cart-header">Your Order</h1>
+    <section class="cart-items" id="cart-items" aria-live="polite" aria-relevant="additions removals">
+    </section>
+    <section class="cart-summary" aria-label="Order summary">
+      <div class="summary-row">
+        <span class="summary-label">Subtotal</span>
+        <span class="summary-value" id="subtotal">$0.00</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Shipping</span>
+        <span class="summary-value" id="shipping">$10.00</span>
+      </div>
+      <div class="summary-row summary-total">
+        <span class="summary-label">Total</span>
+        <span class="summary-value" id="total">$0.00</span>
+      </div>
+      <button id="checkout-btn" class="checkout-btn" disabled>PROCEED TO CHECKOUT</button>
+    </section>
+  </main>
+<script src="index.js"></script>
 </body>
 </html>
